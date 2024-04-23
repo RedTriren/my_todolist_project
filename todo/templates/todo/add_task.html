@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5">
+    <title>Add Task</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .sky-blue-box {
+            background-color: #CCEEFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="sky-blue-box">
+                <h1>할 일 추가</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="title" placeholder="할 일 입력">
+                    <button type="submit">추가</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
